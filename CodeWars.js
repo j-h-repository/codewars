@@ -154,7 +154,52 @@ function digitalRoot(n) {
     return sum
 }
 
-console.log(digitalRoot(19))
+//console.log(digitalRoot(19))
 
 //++++++++++++++++++++++++++++++++++++++++++++++
-//second commit here
+//roman numeral decoder
+function solution (roman) {
+let sum = [];
+let sum2=0;
+let org = roman.split("")
+console.log(org)
+for(let i=0; i<org.length; i++){
+
+  if(org[i]=="M"){
+    console.log("added 1000")
+    sum.push(1000);
+  } else if(org[i]=="D"){
+    sum.push(500);
+    console.log("added 500")
+  }else if(org[i]=="C"){
+    sum.push(100);
+    console.log("added 100")
+  }else if(org[i]=="L"){
+    sum.push(50);
+    console.log("added 50")
+  }else if(org[i]=="X"){
+    sum.push(10);
+    console.log("added 10")
+  }else if(org[i]=="V"){
+    sum.push(5);
+    console.log("added 5")
+  }else if(org[i]=="I"){
+    sum.push(1);
+    console.log("added 1")
+  }
+
+}
+for(let i=0; i<sum.length; i++){
+
+    if(sum[i]<sum[i+1]){
+      sum2-=sum[i]
+    } else{
+      sum2+= sum[i]
+    }
+  
+}
+return sum2
+
+}
+
+//console.log(solution("VLI"))
