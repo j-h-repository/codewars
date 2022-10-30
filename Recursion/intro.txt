@@ -1,0 +1,46 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+What is Recursion?
+
+	Recursion uses a data structure called a stack
+
+	A recursive "thing" is something whose definition is itself (a self-referring definition)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+What are functions:
+	1. They have code when the function is called
+	2. These functions have arguments (no limit to how may) that are used as input
+	3. Functions have a return value
+	4. A program recalls which lines of code calls the function and returns to that line of code 
+
+	---programs recall which line called them via a call stack (a list of objects)
+		
+	data can only be added or remove at the top of the stack (the latest item)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+What Are Recursive Functions and Stack Overflows?
+
+	A recursive function is a function that calls itself
+	
+	e.g. const caller = ()=>{caller();}
+		--this function will call itself infinitely, this will lead to the stack overflow bug (when the call stack uses up all of computer's memory)
+
+		+++avoid maximum call stacks with base cases
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Base Cases and Recursive Cases
+
+	a base case is a condition that prompts the function to stop calling itself and instead return (opposite is the recursive case)
+
+	function countDownAndUp(number) {
+		1 document.write(number + "<br />"); 
+	if (number === 0) {
+		// BASE CASE
+		2 document.write("Reached the base case.<br />");
+          	  return;
+      	} else {
+		// RECURSIVE CASE
+		3 countDownAndUp(number - 1);
+		4 document.write(number + " returning<br />");
+		   return; }
+	}
+	5 countDownAndUp(3);
