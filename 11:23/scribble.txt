@@ -1,0 +1,8 @@
+if len = 4
+
+how many times can num go into 10000
+81.9672
+how many times can 122 go into 1000
+
+
+122 is a multiple of 2, 
