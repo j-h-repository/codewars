@@ -28,7 +28,7 @@ word2 = "here"
 
 def printName(first, last):
     print("What is your middle name? (enter below)")
-    middleName= input()
+    middleName = input()
     #the input() function pauses the function to receive input from the user, the continues the function/program
     print("Length of middle name: " + str(len(middleName))) 
     #the str() function converts the inner data into a string
